@@ -9,28 +9,28 @@ In gameplay, the player becomes 'the coder' and uses keyboard controls to move i
 ### The 'Things' in Javaroids
 
 #### Thing 1: the code kind of java
-How it moves: automatically; all over the screen at a constant speed
-What it looks like: ![code](/images/code.png "http://www.ngeeks.com/en/wp-content/uploads/2012/11/Hello-World.png")
+##### How it moves: automatically; all over the screen at a constant speed
+##### ![code](/images/code.png "http://www.ngeeks.com/en/wp-content/uploads/2012/11/Hello-World.png")
 
 #### Thing 2: bugs in your code
-How it moves: at random time intervals; released from each instance of thing 2 and in random directions
-What it looks like: ![bug](/images/bug.jpg "http://us.123rf.com/400wm/400/400/mjp/mjp0606/mjp060600148/425205-big-flying-bug.jpg")
+##### How it moves: at random time intervals; released from each instance of thing 2 and in random directions
+##### ![bug](/images/bug.jpg "http://us.123rf.com/400wm/400/400/mjp/mjp0606/mjp060600148/425205-big-flying-bug.jpg")
 
 #### Thing 3: computer crash
-How it moves: at random time intervals; spirals from the center outward
-What it looks like: ![crash](/images/crash.gif "http://www.mv.com/ipusers/ullr/BSOD.gif")
+##### How it moves: at random time intervals; spirals from the center outward
+##### ![crash](/images/crash.gif "http://www.mv.com/ipusers/ullr/BSOD.gif")
 
 #### Thing 4: debugger
-How it moves: on user keyboard event; released from player's icon ('the coder') in the direction which the player icon is facing at the time of keyboard event
-What it looks like: ![debugger](/images/debugger.jpg "http://www.iconshock.com/img_jpg/REALVISTA/development/jpg/128/debugger_icon.jpg")
+##### How it moves: on user keyboard event; released from player's icon ('the coder') in the direction which the player icon is facing at the time of keyboard event
+##### ![debugger](/images/debugger.jpg "http://www.iconshock.com/img_jpg/REALVISTA/development/jpg/128/debugger_icon.jpg")
 
 #### Thing 5: the coffee kind of java
-How it moves: at random time intervals; appears in random locations on screen for random amount of time
-What it looks like: ![coffee](/images/coffee.png "http://corunco.com/wp-content/uploads/2013/03/CHM-Coffee-Mug1.png")
+##### How it moves: at random time intervals; appears in random locations on screen for random amount of time
+##### ![coffee](/images/coffee.png "http://corunco.com/wp-content/uploads/2013/03/CHM-Coffee-Mug1.png")
 
 ## How to play Javaroids
-Movement of 'the coder' (i.e. player's icon) is caused by player's keyboard input.
-Key commands and what they do:
+##### Movement of 'the coder' (i.e. player's icon) is caused by player's keyboard input.
+##### Key commands and what they do:
   + `up` moves player icon forward (based on orientation)
   + `down` moves player icon backward (based on orientation)
   + `left` rotates player icon orientation 90 degrees counterclockwise
@@ -45,5 +45,5 @@ The coder loses a life each time it collides with a code object. The coder gains
 
 ### GUI layout of Javaroids
 Upon execution of the program, a start screen will be displayed with one buttons: `start game`. If the user presses `start game`, the gameplay screen will appear and gameplay will begin. The gameplay screen will display one button: `end game`. If at any time the user presses `end game`, gameplay will end and the program will return to the start screen.
-![mainmenu](/images/mainmenu.jpg "Main Menu")
-![javaroids](/images/javaroids.jpg "Javaroids Gameplay")
+##### ![mainmenu](/images/mainmenu.png "Main Menu")
+##### ![javaroids](/images/javaroids.png "Javaroids Gameplay")
