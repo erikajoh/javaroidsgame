@@ -1,5 +1,5 @@
 # Game Design Document
-This is my game design document. Keep reading to learn about Javaroids: a world of java.
+This is my game design document. Last updated by Erika Johnson 4/22/13. Keep reading to learn about Javaroids: a world of java.
 
 ----
 
