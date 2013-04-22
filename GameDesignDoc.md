@@ -45,5 +45,17 @@ The coder loses a life each time it collides with a code object. The coder gains
 
 ### GUI layout of Javaroids
 Upon execution of the program, a start screen will be displayed with one buttons: `start game`. If the user presses `start game`, the gameplay screen will appear and gameplay will begin. The gameplay screen will display one button: `end game`. If at any time the user presses `end game`, gameplay will end and the program will return to the start screen.
+##### Main Menu
 ##### ![mainmenu](/images/mainmenu.png "Main Menu")
+##### Gameplay
 ##### ![javaroids](/images/javaroids.png "Javaroids Gameplay")
+
+### Sources
+##### code.png from [http://www.ngeeks.com/en/wp-content/uploads/2012/11/Hello-World.png](http://www.ngeeks.com/en/wp-content/uploads/2012/11/Hello-World.png)
+##### debugger.jpg from [http://www.iconshock.com/img_jpg/REALVISTA/development/jpg/128/debugger_icon.jpg](http://www.iconshock.com/img_jpg/REALVISTA/development/jpg/128/debugger_icon.jpg)
+##### bug.jpg [http://us.123rf.com/400wm/400/400/mjp/mjp0606/mjp060600148/425205-big-flying-bug.jpg](http://us.123rf.com/400wm/400/400/mjp/mjp0606/mjp060600148/425205-big-flying-bug.jpg)
+##### crash.gif [http://www.mv.com/ipusers/ullr/BSOD.gif](http://www.mv.com/ipusers/ullr/BSOD.gif)
+##### coffee.png from [http://corunco.com/wp-content/uploads/2013/03/CHM-Coffee-Mug1.png](http://corunco.com/wp-content/uploads/2013/03/CHM-Coffee-Mug1.png)
+##### coder.jpg from [http://supercoders.info/wp-content/uploads/2009/10/supercoder300x400-flip.jpg](http://supercoders.info/wp-content/uploads/2009/10/supercoder300x400-flip.jpg)
+##### mainmenu.png and javaroids.png created in Paintbrush for Mac
+
