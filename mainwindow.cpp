@@ -12,9 +12,16 @@ MainWindow::MainWindow()  {
     screen->setFixedSize(600, 650);
     gameLayout = NULL;
     menuLayout = NULL;
+    mediaObject = NULL;
     timer = NULL;
     srand(time(0));
     showMenu();
+
+    QTimer* audioTimer = new QTimer();
+    audioTimer->setInterval(24000);
+    connect(audioTimer, SIGNAL(timeout()), this, SLOT(playAudio()));
+    audioTimer->start();
+    playAudio();
 
 }
 
@@ -537,6 +544,12 @@ void MainWindow::restartGame(){
   objectList = new vector<Object*>;
   delete debuggerList;
   debuggerList = new vector<Debugger*>;
+}
+
+void MainWindow::playAudio(){
+  if(mediaObject) mediaObject->stop();
+  mediaObject = Phonon::createPlayer(Phonon::NoCategory,Phonon::MediaSource("images/cruiser.wav"));
+  mediaObject->play();
 }
 
 MainWindow::~MainWindow()
