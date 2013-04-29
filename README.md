@@ -6,7 +6,7 @@
 
 ### Game Information
   + Game Name: Javaroids
-  + Game Description: In gameplay, the player becomes 'the coder' and uses keyboard controls to move itself around the screen while trying to 'debug code' by shooting 'debuggers' the 'bug' objects floating around the screen.
+  + Game Description: In gameplay, the player becomes 'the coder' and uses keyboard controls to move itself around the screen while trying to 'collect coffee' and 'debug code' by shooting 'debuggers' at the 'bug' objects shooting out of the 'code' objects moving around the screen.
   + [Game Design Doc](GameDesignDoc.md)
 
 
@@ -30,4 +30,7 @@ config.txt
 ```
 
 ### Screenshots
-You can either remove this section or add screenshots if you wish.
+##### Main Menu
+##### ![mainmenu](/images/mainmenu.png "Main Menu")
+##### Gameplay
+##### ![javaroids](/images/javaroids.png "Javaroids Gameplay")
