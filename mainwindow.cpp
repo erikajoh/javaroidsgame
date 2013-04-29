@@ -13,15 +13,14 @@ MainWindow::MainWindow()  {
     gameLayout = NULL;
     menuLayout = NULL;
     mediaObject = NULL;
-    timer = NULL;
-    srand(time(0));
-    showMenu();
-
     QTimer* audioTimer = new QTimer();
     audioTimer->setInterval(24000);
     connect(audioTimer, SIGNAL(timeout()), this, SLOT(playAudio()));
     audioTimer->start();
     playAudio();
+    timer = NULL;
+    srand(time(0));
+    showMenu();
 
 }
 

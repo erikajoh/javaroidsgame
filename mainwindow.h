@@ -103,6 +103,7 @@ private:
     /** Phonon MediaObject to store audio clip */
     Phonon::MediaObject *mediaObject;
 
+
 public slots:
     /** Starts a new game */
     void newGame();
