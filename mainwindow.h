@@ -65,7 +65,7 @@ public:
     string getUsername() {return user;}
     /** Returns current player's score */
     int getScore() {return scoreCount;}
-    /** Returns pointer to list of high scores */
+    /** Returns a pointer to list of high scores */
     PMMinList* getHighScores() {return highScores;}
 
 private:

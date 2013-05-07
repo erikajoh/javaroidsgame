@@ -44,7 +44,7 @@ void MainWindow::newGame() {
         if ((username->text()).at(i) == ' ') {
             QMessageBox box;
             box.setWindowTitle("Error");
-            box.setText("Please enter a username without spaces.");
+            box.setText("Please enter a username with no spaces.");
             box.exec();
             return;
         }
