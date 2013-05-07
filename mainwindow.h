@@ -22,6 +22,9 @@
 #include <QFormLayout>
 #include <QKeyEvent>
 #include <QWidget>
+#include <QStandardItem>
+#include <QStandardItemModel>
+#include <QString>
 #include <ctime>
 #include <cstdlib>
 #include <iostream>
@@ -33,6 +36,10 @@
 #include "coffee.h"
 #include "debugger.h"
 #include "bluescreen.h"
+#include "codergirl.h"
+#include "superbug.h"
+#include "pmminlist.h"
+#include <fstream>
 #include <phonon/audiooutput.h>
 #include <phonon/mediaobject.h>
 
@@ -44,12 +51,22 @@ class MainWindow : public QWidget {
     
 public:
   /** MainWindow constructor */
-    explicit MainWindow();
+    explicit MainWindow(char *filename);
   /** MainWindow deconstructor */
     ~MainWindow();
 
     /** Shows the window on the GUI screen */
     void show();
+    /** Reads the high scores from file and populates list */
+    void readScores();
+    /** Writes the high scores to file */
+    void writeScores();
+    /** Returns current player's username */
+    string getUsername() {return user;}
+    /** Returns current player's score */
+    int getScore() {return scoreCount;}
+    /** Returns pointer to list of high scores */
+    PMMinList* getHighScores() {return highScores;}
 
 private:
     /** Pointer to QGraphicsScene for display */
@@ -59,17 +76,17 @@ private:
     /** Pointer to QTimer for animation */
     QTimer *timer;
     /** Pointers to vertical layouts of GUI screen */
-    QVBoxLayout *menuLayout, *gameLayout, *coder, *code, *coffee, *bug, *debugger, *blueScrn;
+    QVBoxLayout *menuLayout, *gameLayout, *coder, *code, *coffee, *bug, *debugger, *blueScrn, *coderGirl, *superBug, *scoresLayout;
     /** Pointers to horizontal layouts of GUI screen */
     QHBoxLayout *icons, *status, *topBar;
     /** Pointers to buttons */
-    QPushButton *start, *exit, *end, *pause, *invincible, *restart;
+    QPushButton *start, *highScoresButton, *exit, *back, *end, *pause, *invincible, *restart;
     /** Pointers to labels */
     QLabel *welcome, *instructions, *score, *scoreDisp, *lives, *livesDisp, *level, *levelDisp, *prompt;
     /** Pointer to screen widget */
     QWidget *screen;
     /** Pointers to labels */
-    QLabel *coderPic, *coderTxt, *codePic, *codeTxt, *coffeePic, *coffeeTxt, *bugPic, *bugTxt, *debuggerPic, *debuggerTxt, *blueScrnPic, *blueScrnTxt, *name, *nameDisp, *tips;
+    QLabel *coderPic, *coderTxt, *codePic, *codeTxt, *coffeePic, *coffeeTxt, *bugPic, *bugTxt, *debuggerPic, *debuggerTxt, *blueScrnPic, *blueScrnTxt, *coderGirlPic, *coderGirlTxt, *superBugPic, *superBugTxt, *name, *nameDisp, *tips;
     /** Pointer to username input line edit */
     QLineEdit *username;
     /** Pointer to Coder object */
@@ -84,8 +101,14 @@ private:
     Coffee *coffeeObj;
     /** Pointer to Bluescreen object */
     Bluescreen *bluescreenObj;
+    /** Pointer to CoderGirl object */
+    CoderGirl *coderGirlObj;
+    /** Pointer to SuperBug object */
+    SuperBug *superBugObj;
     /** Pointers to QPixmaps for setting images of objects */
-    QPixmap *coderImg, *codeImg, *coffeeImg, *bugImg, *bluescreenImg, *debuggerImgLeft, *debuggerImgUp, *debuggerImgRight, *debuggerImgDown, *bgImg;
+    QPixmap *coderImg, *codeImg, *coffeeImg, *bugImg, *bluescreenImg, *debuggerImgLeft, *debuggerImgUp, *debuggerImgRight, *debuggerImgDown, *coderGirlImg, *superBugImg, *bgImg;
+    /** Pointer to QGraphicsPixmapItem to set background image */
+    QGraphicsPixmapItem *bg;
     /** Keeps track of direction to move each object */
     int dir;
     /** Keeps track of time, i.e. number of times handleTimer() has been called */
@@ -102,6 +125,20 @@ private:
     int scoreCount, livesCount, levelCount;
     /** Phonon MediaObject to store audio clip */
     Phonon::MediaObject *mediaObject;
+    /** PMMinList to keep track of high scores */
+    PMMinList *highScores;
+    /** Char array to store name of high scores file */
+    char *fn;
+    /** QString to store current player's username */
+    QString *nameTxt;
+    /** QListView to display high scores */
+    QListView *highScoreDisp;
+    /** QStandardItemModel to help display high scores */
+    QStandardItemModel *model;
+    /** QStandardItem to help display high scores */
+    QStandardItem *item;
+    /** String to store current player's username */
+    string user;
 
 
 public slots:
@@ -117,8 +154,12 @@ public slots:
     void setInvincible();
     /** Restarts the gameplay */
     void restartGame();
+    /** Ends game and returns to main menu */
+    void endGame();
     /** Plays audio clip */
     void playAudio();
+    /** Displays high scores */
+    void displayScores();
 
  protected:
     /** Handles key presses
