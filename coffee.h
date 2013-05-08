@@ -16,21 +16,9 @@ public:
   Coffee(QPixmap *pm, int nx, int ny);
   /** Coffee's move function */
   void move();
-  /** Checks to see if object is a Code object
-   *@return false */
-  bool isCode() {return false;}
   /** Checks to see if object is a Coffee object
    *@return true */
   bool isCoffee() {return true;}
-  /** Checks to see if object is a Bluescreen object
-   *@return false */
-  bool isBluescreen() {return false;}
-  /** Checks to see if object is a Bug object
-   *@return false */
-  bool isBug() {return false;}
-  /** Checks to see if object is a Debugger object
-   *@return false */
-  bool isDebugger() {return false;}
 
 };
 

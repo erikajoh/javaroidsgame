@@ -17,21 +17,9 @@ public:
   Bluescreen(QPixmap *pm, int nx, int ny);
   /** Bluescreen's move function, uses fibonacci sequence */
   void move();
-  /** Checks to see if object is a Code object
-   *@return false */
-  bool isCode() {return false;}
-  /** Checks to see if object is a Coffee object
-   *@return false */
-  bool isCoffee() {return false;}
   /** Checks to see if object is a Bluescreen object
    *@return true */
   bool isBluescreen() {return true;}
-  /** Checks to see if object is a Bug object
-   *@return false */
-  bool isBug() {return false;}
-  /** Checks to see if object is a Debugger object
-   *@return false */
-  bool isDebugger() {return false;}
 
  private:
   /** Ints to store values for fibonacci sequence */

@@ -23,18 +23,6 @@ public:
   /** Checks to see if object is a Code object
    *@return true */
   bool isCode() {return true;}
-  /** Checks to see if object is a Coffee object
-   *@return false */
-  bool isCoffee() {return false;}
-  /** Checks to see if object is a Bluescreen object
-   *@return false */
-  bool isBluescreen() {return false;}
-  /** Checks to see if object is a Bug object
-   *@return false */
-  bool isBug() {return false;}
-  /** Checks to see if object is a Debugger object
-   *@return false */
-  bool isDebugger() {return false;}
 
 };
 

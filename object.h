@@ -35,19 +35,25 @@ class Object : public QGraphicsPixmapItem {
   int getDir();
   /** Virtual check function to see if object is a Code object
    *@return true if object is Code, else false */
-  virtual bool isCode() = 0;
+  virtual bool isCode() {return false;}
   /** Virtual check function to see if object is a Coffee object
    *@return true if object is Coffee, else false */
-  virtual bool isCoffee() = 0;
+  virtual bool isCoffee() {return false;}
   /** Virtual check function to see if object is a Bluescreen object
    *@return true if object is Bluescreen, else false */
-  virtual bool isBluescreen() = 0;
+  virtual bool isBluescreen() {return false;}
   /** Virtual check function to see if object is a Bug object
    *@return true if object is Bug, else false */
-  virtual bool isBug() = 0;
+  virtual bool isBug() {return false;}
   /** Virtual check function to see if object is a Debugger object
    *@return true if object is Debugger, else false */
-  virtual bool isDebugger() = 0;
+  virtual bool isDebugger() {return false;}
+  /** Virtual check function to see if object is a CoderGirl object
+   *@return true if object is CoderGirl, else false */
+  virtual bool isCoderGirl() {return false;}
+  /** Virtual check function to see if object is a SuperBug object
+   *@return true if object is SuperBug, else false */
+  virtual bool isSuperBug() {return false;}
 
  protected:
   /** Stores x position of object */

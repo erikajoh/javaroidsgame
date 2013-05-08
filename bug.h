@@ -16,21 +16,9 @@ public:
   Bug(QPixmap *pm, int nx, int ny);
   /** Bug's move function */
   void move();
-  /** Checks to see if object is a Code object
-   *@return false */
-  bool isCode() {return false;}
-  /** Checks to see if object is a Coffee object
-   *@return false */
-  bool isCoffee() {return false;}
-  /** Checks to see if object is a Bluescreen object
-   *@return false */
-  bool isBluescreen() {return false;}
   /** Checks to see if object is a Bug object
    *@return true */
   bool isBug() {return true;}
-  /** Checks to see if object is a Debugger object
-   *@return false */
-  bool isDebugger() {return false;}
 
 };
 
