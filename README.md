@@ -8,6 +8,7 @@
   + Game Name: Javaroids
   + Game Description: In gameplay, the player becomes 'the coder' and uses keyboard controls to move itself around the screen while trying to 'collect coffee', 'catch the coder girl', and 'debug code' by shooting 'debuggers' at the 'bug' and 'superbug' objects shooting out of the 'code' objects moving around the screen.
   + [Game Design Doc](GameDesignDoc.md)
+  + [License](LICENSE.md)
   + Note: errors printed in console are a problem with Qt. See #236 in the PA Issue Tracker.
 
 
